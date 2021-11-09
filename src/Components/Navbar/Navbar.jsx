@@ -1,27 +1,22 @@
 import "./navbar.css"
-import Login from "./img/login.PNG"
-import Cart from "./img/cart.PNG"
+import Cart from "../cartWidget/cartWidget"
+import React from 'react';
+import Buttons from '../Buttons/Buttons'
 
 function Navbar(){
     return (
-        <>
+        <React.Fragment>
         <nav id="navbar" className="nav_links">
             <div id="menu_principal" className="nav_primary">
-                <a id="main" className="bot-style" href="/">Main</a>
-                <a id="printers" className="bot-style" href="/">Printers</a>
-                <a id="mfp" className="bot-style" href="/">MFP</a>
-                <a id="supply" className="bot-style" href="/">Supply</a>
+                <Buttons id="home" style_but="bot-style" link="/" text="HOME"/>
+                <Buttons id="printers" style_but="bot-style" link="/" text="PRINTERS"/>
+                <Buttons id="mfp" style_but="bot-style" link="/" text="MFP"/>
+                <Buttons id="supplies" style_but="bot-style" link="/" text="SUPPLIES"/>
+                <Buttons id="about_us" style_but="bot-style" link="/" text="ABOUT US"/>
             </div>
-            <div id="menu_secundario" className="nav_secondary">
-                <button id="cart" className="button-nav">
-                    <img src= {Cart} width="30px" height="25px" />
-                </button>
-                <button id="login" className="button-nav">
-                    <img src= {Login} width="30px" height="25px"/>
-                </button>
-            </div>
+            <Cart />
         </nav>
-        </>
+        </React.Fragment>
     )
 }
 

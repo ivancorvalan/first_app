@@ -1,10 +1,13 @@
+import React from 'react';
 import "./header.css"
 
 function Header(){
     return (
-        <>
-        <h1 className="header-style">Printing Market <span className="sub-header-style">|Printing & more|</span></h1>
-        </>
+        <React.Fragment>
+                <div className="header-style">
+                    <h1 className="text-style">Print Market.</h1>
+                </div>
+        </React.Fragment>
     )
 }
 
