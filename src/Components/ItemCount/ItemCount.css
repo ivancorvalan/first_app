@@ -1,0 +1,61 @@
+.content-count-button{
+    display: flex;
+    flex-direction: column;
+    border: solid 2px white;
+
+}
+.count-style{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: baseline;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 30px;
+    color: black;
+    border: none;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.25);    
+}
+
+.symbol-style{
+    font-size: 16px;
+    color: black;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.num-style{
+    font-size: 16px;
+    color: black;
+    border: none;
+    text-decoration: none;
+}
+
+.button-style-add{
+    background-color: #f9aa20;
+    width: 200px;
+    height: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.button-text{
+    width: 200px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-size: 16px;
+    color: white;
+}
+
+.button-text:hover{
+    transition: 0.5s;
+    transform: scale(115%);
+    color: rgba(0, 0, 0 , 0.5);
+}
+
+.button-style-add:hover{
+    transition: 0.5s;
+    background-color: white;
+}

@@ -8,9 +8,11 @@
 }
 
 .nav_links{
-    align-items: center;
     display: flex;
     height: 50px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: solid 3px #f9aa20;
 }
 
 .nav_primary{
@@ -18,23 +20,25 @@
     height: 100%;
     align-items:center;
     display: flex;
-    justify-content: space-around;
-    background-color: #37393b;
+    justify-content: space-evenly;
+    background-color: #f9aa20;
 }
 
 .bot-style{
+    font-weight: bold;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     text-align:center;
     text-decoration: none;
     border: none;
-    background-color: #37393b;
+    background-color: rgba(0, 0, 0, 0);
+    /*background-color: #37393b;*/
 }
 
 .bot-style:hover{
-    transition: 0.5s;
-    transform:scale(120%);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0 , 0.5);
 }
+
 
 .nav_secondary{
     width: 10%;
@@ -42,29 +46,30 @@
     display: flex;
     justify-content:space-evenly;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #f9aa20;
+    /*background-color: rgba(255, 255, 255, 0.6);*/
 }
 
 .button-nav{
     border: none;
-    background-color: white;
     display: flex;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.qty-cart{
+    display:block;
+    color:black;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 0px;
+    width: 20px;
+    height: 20px;
 }
 
 .button-nav:hover{
     transition: 0.5s;
-    transform: rotate(20deg);
+    transform: rotate(15deg)
+   
 }
 
-.qty-cart{
-    color: white;
-    font-size: 15px;
-    text-align: center;
-    margin-top: 15px;
-    margin-left: -20px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: solid white 2px;
-    background-color: rgba(0, 0, 0, 0.4);
-}

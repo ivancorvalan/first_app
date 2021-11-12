@@ -4,16 +4,15 @@
 }
 
 *{
-  /*background-color: rgba(245,246,232,255);*/
   font-family: Poppins Light;
   margin: 0%;
   padding: 0%;
 }
 
 .App {
-  text-align: center;
-  color: blue;
-  font-family: 'Courier New', Courier, monospace;
+  background-image: url("./img/backgroung_image.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .App-logo {

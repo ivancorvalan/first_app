@@ -1,11 +1,13 @@
 import React from 'react';
 import "./header.css"
+import Logo from './img/logo.png'
 
 function Header(){
     return (
         <React.Fragment>
                 <div className="header-style">
-                    <h1 className="text-style">Print Market.</h1>
+                    <img src={Logo} className="logo-style" alt=""></img>
+                    <h1 className="text-style">Printers Market.</h1>
                 </div>
         </React.Fragment>
     )

@@ -1,5 +1,5 @@
 import "./navbar.css"
-import Cart from "../cartWidget/cartWidget"
+import Cart from "../CartWidget/CartWidget"
 import React from 'react';
 import Buttons from '../Buttons/Buttons'
 
