@@ -1,6 +1,6 @@
 @font-face{
   font-family: Poppins Light;
-  src: url('/src/Fonts/Poppins/Poppins-Light.ttf')
+  src: url('Fonts/Poppins/Poppins-Light.ttf')
 }
 
 *{
@@ -11,8 +11,11 @@
 
 .App {
   background-image: url("./img/backgroung_image.jpg");
-  background-position: center;
+  background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
+  height: 110%;
+  background-repeat: no-repeat;
 }
 
 .App-logo {

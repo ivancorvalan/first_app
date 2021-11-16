@@ -1,9 +1,9 @@
-import React , { Component , useState , useEffect} from "react";
-import {render} from 'react-dom'
+import React , {useState} from "react";
 import './ItemCount.css'
 
 function ItemCount(props) {
     const [number , setNumber] = useState(Number(props.initial))
+    console.log()
     const stock = Number(props.stock);
     return (
         <React.Fragment>
@@ -13,7 +13,6 @@ function ItemCount(props) {
                             setNumber(number - 1)
                         }
                     }}>-</button>
-
                     <h4 className="num-style">{number}</h4>
                     
                     <button className="symbol-style" onClick={()=> {
@@ -24,8 +23,8 @@ function ItemCount(props) {
                 </div>
                 <div className="button-style-add">
                     <button onClick={function onAdd(){
-                        console.log("Producto " + props.product + "\nCantidad " + number)
-                        }
+                        console.log("Product " + props.product + "\nCantidad " + number + "\nPrice " + (number * props.price))
+                    }
                     } className="button-text">Add to cart</button>
                 </div>
         </React.Fragment>

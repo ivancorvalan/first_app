@@ -1,14 +1,9 @@
-.content-count-button{
-    display: flex;
-    flex-direction: column;
-    border: solid 2px white;
 
-}
 .count-style{
     display: flex;
     flex-direction: row;
     align-content: center;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-evenly;
     width: 200px;
     height: 30px;
@@ -27,7 +22,7 @@
 
 .num-style{
     font-size: 16px;
-    color: black;
+    color: rgb(48, 48, 48);
     border: none;
     text-decoration: none;
 }
@@ -38,6 +33,7 @@
     height: 30px;
     justify-content: center;
     text-align: center;
+    border-bottom-right-radius: 10px;
 }
 
 .button-text{
@@ -45,17 +41,16 @@
     height: 30px;
     background-color: rgba(255, 255, 255, 0);
     border: none;
-    font-size: 16px;
+    font-size: 18px;
     color: white;
 }
 
 .button-text:hover{
     transition: 0.5s;
-    transform: scale(115%);
-    color: rgba(0, 0, 0 , 0.5);
+    color: white;
 }
 
 .button-style-add:hover{
     transition: 0.5s;
-    background-color: white;
+    background-color: #2098D1;
 }

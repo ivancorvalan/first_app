@@ -1,3 +1,4 @@
+import React from 'react'
 import Cart from "./img/cart_white.png"
 
 function CartWidget(){
