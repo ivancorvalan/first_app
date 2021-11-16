@@ -1,21 +1,27 @@
 import React from "react";
 import './ItemList.css'
+import Item from '../Item/Item'
+import ItemCount from "../ItemCount/ItemCount";
 
 function ItemList(props){
+    console.log(props.items)
     return(
         <React.Fragment>
-            <div className="product-content">
-                    <img className="img-size" src={props.item.url_img} alt={props.item.model}/>
-                    <h2 className="product-model">{props.item.model}</h2>
-                    <div className="product-text">
-                        <h4>Type: {props.item.type_model}</h4>
-                        <h4>Trademark: {props.item.trademark}</h4>
-                        <h4>Funtion: {props.item.type_function}</h4>
-                        <h4>Price: {props.item.price} USD</h4>
-                    </div>
+            <div className="container-img">
+            {/*<h1 className="tittle-style">{props.tittle}</h1>
+            <p className="card">{props.text}</p>*/}
+            {
+            props.items?.map((item)=>{
+                return(
+                <div key={item.id} className="content-count-button">
+                    <Item item={item} />
+                    <ItemCount stock={item.stock} initial="1" product={item.model} price={item.price}/>
+                </div>)})
+            }
             </div>
         </React.Fragment>
         )
 }
 
 export default ItemList
+
