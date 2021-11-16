@@ -23,7 +23,7 @@ function ItemCount(props) {
                 </div>
                 <div className="button-style-add">
                     <button onClick={function onAdd(){
-                        console.log("Product " + props.product + "\nCantidad " + number + "\nPrice " + (number * props.price))
+                        console.log("Product " + props.product + "\nCantidad " + number + "\nPrice " + (number * props.price) + " USD")
                     }
                     } className="button-text">Add to cart</button>
                 </div>
