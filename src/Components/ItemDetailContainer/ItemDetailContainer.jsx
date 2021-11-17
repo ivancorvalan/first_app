@@ -28,8 +28,8 @@ function ItemDetailContainer(){
                     }
                     else{
                         return(
-                        <div id="ItemDetailContainer">
-                        </div>
+                        <>
+                        </>
                         )}
                     })
                 }
