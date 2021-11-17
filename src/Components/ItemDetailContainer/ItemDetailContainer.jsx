@@ -6,12 +6,12 @@ import '../ItemDetail/ItemDetail.css'
 function ItemDetailContainer(){
     const [items , setItems] = useState([]);
     useEffect(() => {
-    const getProducts = new Promise ((resolve , reject) => {
+    const getItem = new Promise ((resolve , reject) => {
         setTimeout(() => {
             resolve(products)
         },2000)
     })
-    getProducts
+    getItem
     .then((resp) => {
         setItems(resp)
     })},
