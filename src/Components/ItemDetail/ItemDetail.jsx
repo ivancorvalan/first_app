@@ -5,7 +5,7 @@ function ItemDetail(props){
     const item = props.items
     return (
         <React.Fragment>
-            <div className="card">
+            <div className="card-detail">
                 <div className="text-of-content">
                     <h1 className="tittle-card">Product Details</h1>
                     <ul className="list-style">

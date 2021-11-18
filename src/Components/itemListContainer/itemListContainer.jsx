@@ -9,7 +9,7 @@ function ItemListContainer(props){
     const getProducts = new Promise ((resolve , reject) => {
         setTimeout(() => {
             resolve(products)
-        },2000)
+        },0)
     })
     getProducts
     .then((resp) => {
@@ -18,7 +18,7 @@ function ItemListContainer(props){
     [])
     return (
         <React.Fragment>
-            <ItemList items={items}/>
+            <ItemList items={items} category={props.category}/>
         </React.Fragment>
     )
 }

@@ -1,16 +1,10 @@
-@font-face{
-    font-family: Poppins Light;
-    src: url('../../Fonts/Poppins/Poppins-Light.ttf')}
-*{
-    font-family: Poppins Light;
-}
-
 .nav_links{
     display: flex;
     height: 50px;
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.3);
     border-bottom: solid 3px #f9aa20;
+    text-decoration: none;
 }
 
 .nav_primary{
@@ -23,15 +17,13 @@
 }
 
 .bot-style{
-    font-weight: bold;
-    color: white;
-    font-size: 18px;
-    text-align:center;
     text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-align:center;
     border: none;
     background-color: rgba(0, 0, 0, 0);
 }
-
 
 .nav_secondary{
     width: 10%;
@@ -62,6 +54,5 @@
 .button-nav:hover{
     transition: 0.5s;
     transform: rotate(15deg)
-   
 }
 

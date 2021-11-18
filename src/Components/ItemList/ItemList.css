@@ -3,7 +3,7 @@
     align-self: center;
     width: 200px;
     height: 200px;
-    margin: 10px 0px
+    margin: 10px 0px;
 }
 
 .product-content{
@@ -13,7 +13,7 @@
     width: 200px;
     height: 280px;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgb(255, 255, 255);
 }
 
 .product-text{

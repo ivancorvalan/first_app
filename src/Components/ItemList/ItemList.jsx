@@ -8,15 +8,21 @@ function ItemList(props){
     return(
         <React.Fragment>
             <div id="ItemListContainer" className="container-img">
-            {/*<h1 className="tittle-style">{props.tittle}</h1>
-            <p className="card">{props.text}</p>*/}
             {
             props.items?.map((item)=>{
+                if (props.category === item.type_product){
                 return(
                 <div key={item.id} className="content-count-button">
                     <Item item={item} />
                     <ItemCount stock={item.stock} initial="1" product={item.model} price={item.price}/>
-                </div>)})
+                </div>)}
+                else{
+                    return(
+                        <>
+                        </>
+                    )
+                }
+                })
             }
             </div>
         </React.Fragment>
