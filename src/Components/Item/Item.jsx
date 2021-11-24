@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import './Item.css'
 
 function color(item_color){
-    if (item_color == "Color Laser"){
+    if (item_color === "Monochrome Laser"){
         return 'https://res.cloudinary.com/icorvalan/image/upload/v1637726461/color/mono_uuln0w.png'
     }else{
         return 'http://res.cloudinary.com/icorvalan/image/upload/v1637726461/color/cymk_hdeerg.png'
