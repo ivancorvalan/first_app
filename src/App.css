@@ -14,12 +14,13 @@
 }
 
 .App {
-  background-image: url("./img/backgroung_image.jpg");
+  background-image: url("https://res.cloudinary.com/icorvalan/image/upload/v1637711414/backgrounds/backgroung_image_jtdemr.jpg");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  height: 110%;
+  height: 780px;
   background-repeat: no-repeat;
+
 }
 
 .App-logo {

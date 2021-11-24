@@ -4,25 +4,17 @@ import Item from '../Item/Item'
 import ItemCount from "../ItemCount/ItemCount";
 
 function ItemList(props){
-
     return(
         <React.Fragment>
             <div id="ItemListContainer" className="container-img">
             {
             props.items?.map((item)=>{
-                if (props.category === item.type_product){
                 return(
                 <div key={item.id} className="content-count-button">
                     <Item item={item} />
                     <ItemCount stock={item.stock} initial="1" product={item.model} price={item.price}/>
-                </div>)}
-                else{
-                    return(
-                        <>
-                        </>
-                    )
-                }
-                })
+                </div>
+            )})
             }
             </div>
         </React.Fragment>

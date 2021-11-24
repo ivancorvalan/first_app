@@ -1,24 +1,38 @@
 import React , {useState , useEffect} from 'react';
 import ItemList from '../ItemList/ItemList'
-import {products} from '../DatabaseItems/DatabaseItems'
+import {products} from '../Database/DatabaseItems'
 import "./itemListContainer.css"
+import {useParams} from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
-function ItemListContainer(props){
+function ItemListContainer(){    
     const [items , setItems] = useState([]);
+    const [loader, setLoader] = useState(true);
+    const catId = useParams()
+
     useEffect(() => {
-    const getProducts = new Promise ((resolve , reject) => {
-        setTimeout(() => {
-            resolve(products)
-        },0)
-    })
-    getProducts
-    .then((resp) => {
-        setItems(resp)
-    })},
-    [])
-    return (
+        setLoader(true)
+        const getProducts = new Promise ((resolve , reject) => {
+            setTimeout(() => {
+                resolve(products)
+            },2000)
+        })
+        getProducts
+        .then((resp) => {
+            catId
+            ? setItems(resp.filter(item => item.type_product===catId.catId))
+            : setItems(resp)
+        })
+        .finally(()=>{
+            setLoader(false)
+        })    
+    },[catId])
+
+    return loader ? (
+        <Loading />
+    ) : (
         <React.Fragment>
-            <ItemList items={items} category={props.category}/>
+            <ItemList items={items}/>
         </React.Fragment>
     )
 }

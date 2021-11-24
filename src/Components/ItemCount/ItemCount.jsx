@@ -3,10 +3,10 @@ import './ItemCount.css'
 
 function ItemCount(props) {
     const [number , setNumber] = useState(Number(props.initial))
-    console.log()
     const stock = Number(props.stock);
     return (
         <React.Fragment>
+            <div className="box">
                 <div className="count-style">
                     <button className="symbol-style" onClick={()=> {
                         if (number >=2 ){
@@ -22,11 +22,10 @@ function ItemCount(props) {
                     }}>+</button>
                 </div>
                 <div className="button-style-add">
-                    <button onClick={function onAdd(){
-                        console.log("Product " + props.product + "\nCantidad " + number + "\nPrice " + (number * props.price) + " USD")
-                    }
-                    } className="button-text">Add to cart</button>
+                    <button className="button-text">Add to cart</button>
+                    <button className="button-text">Buy now</button>
                 </div>
+            </div> 
         </React.Fragment>
     )
     

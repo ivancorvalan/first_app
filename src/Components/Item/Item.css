@@ -1,0 +1,14 @@
+.link-item{
+    text-decoration: none;
+}
+
+.img-color{
+    display: flex;
+    margin: auto;
+    margin-bottom: 2px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 20px;
+}

@@ -1,37 +1,43 @@
 import React , {useState , useEffect} from "react";
+import { useParams } from "react-router";
 import ItemDetail from '../ItemDetail/ItemDetail'
-import {products} from '../DatabaseItems/DatabaseItems'
+import Loading from "../Loading/Loading";
+import {products} from '../Database/DatabaseItems'
 import '../ItemDetail/ItemDetail.css'
 
 function ItemDetailContainer(){
     const [items , setItems] = useState([]);
+    const [loader, setLoader] = useState(true);
+    const itemId = useParams()
     useEffect(() => {
-    const getItem = new Promise ((resolve , reject) => {
-        setTimeout(() => {
-            resolve(products)
-        },2000)
-    })
-    getItem
-    .then((resp) => {
-        setItems(resp)
-    })},
-    [])
-    return (
+        setLoader(true)
+        const getItem = new Promise ((resolve , reject) => {
+            setTimeout(() => {
+                resolve(products)
+            },2000)
+        })
+        getItem
+        .then((resp) => {
+            itemId
+            ? setItems(resp.filter(id => id.id===itemId.itemId))
+            : setItems(resp)
+        })
+        .finally(()=>{
+            setLoader(false)
+        })
+    },[itemId])
+
+    return loader ? (
+        <Loading />
+        ) : (
         <React.Fragment>
                 {items?.map((item)=>{
-                    if (item.id === "mfpm_0001"){
-                        return (
+                    return (
                             <div id="ItemDetailContainer" key={item.id} className="content-itemList">
-                                    <ItemDetail items={item}/>
+                                <ItemDetail items={item}/>
                             </div>
                         )
-                    }
-                    else{
-                        return(
-                        <>
-                        </>
-                        )}
-                    })
+                })
                 }
         </React.Fragment>)}
 
