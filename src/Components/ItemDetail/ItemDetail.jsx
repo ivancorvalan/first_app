@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import './ItemDetail.css'
 
-function ItemDetail(props){
-    const item = props.items
+function ItemDetail({item}){
+    const [goToCart , setgoToCart] = useState(true)
+    const onAdd = (quantity) => {
+        console.log({...item , quantity:quantity})
+        setgoToCart(false)
+        }
     return (
         <React.Fragment>
             <div className="card-product">
@@ -19,9 +24,20 @@ function ItemDetail(props){
                             <li className="text-of-list">{item.recommended}</li>
                             <li className="text-of-list">{item.print_speed}</li>
                         </ul>
+                        {
+                        goToCart ? (
                         <div className="add-cart-card" >
-                            <ItemCount stock={item.stock} initial="1" product={item.model} price={item.price}/>
+                            <ItemCount onAdd={onAdd} item={item} initial={1}/>
+                        </div>)
+                        :
+                        (
+                        <div className="add-cart-card">
+                            <Link to="/cart">
+                                <button className="button-text">Buy now!</button>
+                            </Link>
                         </div>
+                        )
+                        }
                     </div>
                 </div>
             </div>

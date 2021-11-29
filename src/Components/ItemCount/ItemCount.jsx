@@ -1,9 +1,8 @@
 import React , {useState} from "react";
 import './ItemCount.css'
 
-function ItemCount(props) {
-    const [number , setNumber] = useState(Number(props.initial))
-    const stock = Number(props.stock);
+function ItemCount({item , onAdd , initial} ) {
+    const [number , setNumber] = useState(Number(initial))
     return (
         <React.Fragment>
             <div className="box">
@@ -16,19 +15,18 @@ function ItemCount(props) {
                     <h4 className="num-style">{number}</h4>
                     
                     <button className="symbol-style" onClick={()=> {
-                        if (number !== stock){
+                        if (number < item.stock){
                             setNumber(number + 1)  
                         }
                     }}>+</button>
+
                 </div>
                 <div className="button-style-add">
-                    <button className="button-text">Add to cart</button>
-                    <button className="button-text">Buy now</button>
+                    <button className="button-text" onClick={()=>onAdd(number)} >Add to cart</button>
                 </div>
             </div> 
         </React.Fragment>
     )
-    
 }
 
 export default ItemCount

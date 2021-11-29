@@ -10,16 +10,16 @@ function color(item_color){
     }
 }
 
-function Item(props){
+function Item({item}){
     return (
         <React.Fragment>
-            <Link to={'/item/'+ props.item.id} className="link-item">            
+            <Link to={'/item/'+ item.id} className="link-item">            
                 <div className="product-content">
-                        <img className="img-size" src={props.item.url_img} alt={props.item.model}/>
-                        <img className="img-color" src={color(props.item.type_model)} alt="type"></img>
-                        <h2 className="product-model">{props.item.mark} {props.item.model}</h2>
+                        <img className="img-size" src={item.url_img} alt={item.model}/>
+                        <img className="img-color" src={color(item.type_model)} alt="type"></img>
+                        <h2 className="product-model">{item.mark} {item.model}</h2>
                         <div className="product-text">
-                            <h4>Price: {props.item.price} USD</h4>
+                            <h4>Price: {item.price} USD</h4>
                         </div>
                 </div>
             </Link>

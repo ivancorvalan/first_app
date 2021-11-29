@@ -18,6 +18,7 @@ function App() {
         <Route path="/" element={<Home tittle={home.tittle} text={home.text}/>}/>
         <Route path="/category/:catId" element={<ItemListContainer />} />
         <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+        <Route path="/cart" element={""} />
       </Routes>
     </BrowserRouter>
     </div>

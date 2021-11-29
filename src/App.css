@@ -11,6 +11,7 @@
   font-family: Poppins Light;
   margin: 0%;
   padding: 0%;
+  box-sizing: border-box;
 }
 
 .App {
@@ -20,7 +21,8 @@
   background-attachment: fixed;
   height: 780px;
   background-repeat: no-repeat;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {

@@ -1,15 +1,18 @@
+* {
+    box-sizing: border-box;
+}
 .content-count-button{
     display: flex;
     flex-direction: column;
-    border-bottom-right-radius: 10px;
-    border-top-left-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0 , 0.2); 
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); 
 }
 
 .container-img{
-    width: 100%;
     height: 500px;
+    border-radius: 5px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items:center;
     align-content: space-evenly;
@@ -34,22 +37,6 @@
     width: 600px;
     text-align:justify;
     text-shadow: 2px 2px 2px rgba(0, 0, 0 , 0.5); 
-}
-
-.buy-button{
-    background-color: salmon;
-    color: white;
-    border: none;
-    font-size: 25px;
-    width: 100px;
-    height: 35px;
-    text-align: center;
-    align-items: center;
-}
-
-.buy-button:hover{
-    transition: 0.5s;
-    transform: scale(125%);
 }
 
 .product-style{

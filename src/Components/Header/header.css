@@ -4,13 +4,13 @@
     align-items: center;
     height: 75px;
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .text-style{
     margin-left: 1%;
     color:rgb(255, 255, 255);
-    font-size: 45px;
+    font-size: 350%;
     text-shadow: 5px 5px 0px rgba(0, 0, 0 , 0.5);
 }
 

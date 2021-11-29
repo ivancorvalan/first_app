@@ -14,7 +14,7 @@ function ItemDetailContainer(){
         const getItem = new Promise ((resolve , reject) => {
             setTimeout(() => {
                 resolve(products)
-            },2000)
+            },0)
         })
         getItem
         .then((resp) => {
@@ -31,10 +31,10 @@ function ItemDetailContainer(){
         <Loading />
         ) : (
         <React.Fragment>
-                {items?.map((item)=>{
+                {items?.map((item)=>{    
                     return (
                             <div id="ItemDetailContainer" key={item.id} className="content-itemList">
-                                <ItemDetail items={item}/>
+                                <ItemDetail item={item}/>
                             </div>
                         )
                 })
