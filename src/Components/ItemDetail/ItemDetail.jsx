@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, {useState } from "react";
 import { Link } from "react-router-dom";
+import { useAddCart} from "../../Context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import './ItemDetail.css'
 
+
 function ItemDetail({item}){
-    const [goToCart , setgoToCart] = useState(true)
+    const add = useAddCart()
+    const [goToCart , setGoToCart] = useState(true)
     const onAdd = (quantity) => {
-        console.log({...item , quantity:quantity})
-        setgoToCart(false)
+        add({...item , quantity:quantity})
+        setGoToCart(false)
         }
     return (
         <React.Fragment>
@@ -27,7 +30,7 @@ function ItemDetail({item}){
                         {
                         goToCart ? (
                         <div className="add-cart-card" >
-                            <ItemCount onAdd={onAdd} item={item} initial={1}/>
+                            <ItemCount onAdd={onAdd} stock={item.stock} initial={1}/>
                         </div>)
                         :
                         (

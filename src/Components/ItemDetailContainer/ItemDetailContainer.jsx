@@ -34,7 +34,9 @@ function ItemDetailContainer(){
                 {items?.map((item)=>{    
                     return (
                             <div id="ItemDetailContainer" key={item.id} className="content-itemList">
-                                <ItemDetail item={item}/>
+                                
+                                    <ItemDetail item={item}/>
+                                
                             </div>
                         )
                 })
