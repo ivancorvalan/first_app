@@ -32,7 +32,9 @@ function ItemListContainer(){
         <Loading />
     ) : (
         <React.Fragment>
+            <div>
             <ItemList items={items}/>
+            </div>
         </React.Fragment>
     )
 }

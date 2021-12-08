@@ -5,8 +5,18 @@
     background-color: white;
     font-size: 14px;
     width: 800px;
-    height: 400px;
+    height: 425px;
     text-shadow: none;
+}
+
+.img-color-detail{
+    display: flex;
+    margin-top: -20px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
 }
 
 .card-product{
@@ -84,3 +94,10 @@
     border-radius: 5px;
 }
 
+.card-imgs{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}

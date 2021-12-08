@@ -1,12 +1,13 @@
 import React from "react";
 import './Home.css'
 
-function Home(props){
+
+function Home({home}){
     return(
         <React.Fragment>
             <div className="container-home">
-                <h1 className="tittle-style">{props.tittle}</h1>
-                <p className="card-text">{props.text}</p>
+                <h1 className="tittle-style">{home.tittle}</h1>
+                <p className="card-text">{home.text}</p>
             </div>
         </React.Fragment>
         )

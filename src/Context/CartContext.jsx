@@ -19,9 +19,18 @@ export function CartContext ( {children}) {
         return itemsCart?.findIndex(itemOnCart => itemOnCart.id === item.id)
     }
 
+    const deleteItem = (item) =>{
+        let new_ItemsCart = []
+        itemsCart.forEach(element => {
+            if (element.id !== item.id){
+                new_ItemsCart.push(element)
+            }
+        });
+        setItemsCart(new_ItemsCart)
+    }
+    
     const addToCart = (item) => {
         const indice = isOnCart(item)
-        console.log(indice)
         if (indice === -1){
             setItemsCart([...itemsCart , item])
         }
@@ -30,16 +39,15 @@ export function CartContext ( {children}) {
             if (itemChanged !== false){
                 itemsCart[indice] = itemChanged
                 setItemsCart(itemsCart)
-                console.log(itemsCart)
             }
             else{
                 alert("La cantidad seleccionada excede el stock")
             }
         }
     }
-    console.log(itemsCart)
+
     return (
-        <Context.Provider value={{addToCart , itemsCart , setItemsCart}}>
+        <Context.Provider value={{useDeleteItem , deleteItem , useItemsCart , addToCart , itemsCart , setItemsCart}}>
             {children}
         </Context.Provider>
     )
@@ -47,6 +55,14 @@ export function CartContext ( {children}) {
 
 export function useAddCart(){
     return useContext(Context).addToCart
+}
+
+export function useItemsCart(){
+    return useContext(Context).itemsCart
+}
+
+export function useDeleteItem(){
+    return useContext(Context).deleteItem
 }
 
 export default CartContext

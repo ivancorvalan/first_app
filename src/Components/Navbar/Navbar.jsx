@@ -1,5 +1,5 @@
 import "./navbar.css"
-import Cart from "../CartWidget/CartWidget"
+import Cart from '../CartWidget/CartWidget'
 import React from 'react';
 import '../extern-CSS/hover.css'
 import {Link} from 'react-router-dom'
