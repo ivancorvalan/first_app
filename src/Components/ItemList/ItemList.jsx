@@ -9,8 +9,8 @@ function ItemList({items}){
             {
             items?.map((item)=>{
                 return(
-                <div key={item.id} className="content-count-button">
-                    <Item item={item} />
+                <div key={item.data().id} className="content-count-button">
+                    <Item item={item.data()} />
                 </div>
             )})
             }

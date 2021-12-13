@@ -19,14 +19,8 @@ export function CartContext ( {children}) {
         return itemsCart?.findIndex(itemOnCart => itemOnCart.id === item.id)
     }
 
-    const deleteItem = (item) =>{
-        let new_ItemsCart = []
-        itemsCart.forEach(element => {
-            if (element.id !== item.id){
-                new_ItemsCart.push(element)
-            }
-        });
-        setItemsCart(new_ItemsCart)
+    const deleteItem = (item) => {
+        setItemsCart(itemsCart.filter(element => element.id !== item.id))
     }
     
     const addToCart = (item) => {

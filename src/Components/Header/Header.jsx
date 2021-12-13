@@ -7,7 +7,7 @@ function Header(){
         <React.Fragment>
                 <div id="header" className="header-style">
                     <img src={Logo} className="logo-style" alt=""></img>
-                    <h1 className="text-style">Printer Market.</h1>
+                    <h1 className="text-style">Printers Market.</h1>
                 </div>
         </React.Fragment>
     )

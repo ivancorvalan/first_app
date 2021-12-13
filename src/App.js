@@ -11,6 +11,7 @@ import {home} from './Components/Database/DataBaseHome'
 import CartContext from './Context/CartContext';
 
 function App() {
+
   return (
     <div className="App">
       <CartContext>

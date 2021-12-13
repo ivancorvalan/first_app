@@ -39,8 +39,8 @@ const Cart = () => {
                     const item_link = "/item/"+item.id
                     return(
                         <React.Fragment>
-                            <div className="item-style">
-                                <CartItemDetail item={item}/>
+                            <div className="item-style" key={item.id}>
+                                <CartItemDetail item={item} key={item.id}/>
                                 <div className="bar-buttons">
                                     <button className="button-text-cart" onClick={()=>{deleteItemCart(item)}} >Delete</button>
                                     <Link to={item_link}>
