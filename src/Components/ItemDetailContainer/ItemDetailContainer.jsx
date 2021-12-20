@@ -15,7 +15,7 @@ function ItemDetailContainer(){
     useEffect(() => {
         setLoader(true)
         const db = getFirestore()
-        const ref = collection(db , "items")
+        const ref = collection(db , "products")
         getDocs(ref)
             .then((snapShot) => {
                 itemId

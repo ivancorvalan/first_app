@@ -22,6 +22,10 @@ export function CartContext ( {children}) {
     const deleteItem = (item) => {
         setItemsCart(itemsCart.filter(element => element.id !== item.id))
     }
+
+    const clearCart = () => {
+        setItemsCart([])
+    }
     
     const addToCart = (item) => {
         const indice = isOnCart(item)
@@ -41,7 +45,7 @@ export function CartContext ( {children}) {
     }
 
     return (
-        <Context.Provider value={{useDeleteItem , deleteItem , useItemsCart , addToCart , itemsCart , setItemsCart}}>
+        <Context.Provider value={{useClearCart , clearCart , useDeleteItem , deleteItem , useItemsCart , addToCart , itemsCart , setItemsCart}}>
             {children}
         </Context.Provider>
     )
@@ -57,6 +61,10 @@ export function useItemsCart(){
 
 export function useDeleteItem(){
     return useContext(Context).deleteItem
+}
+
+export function useClearCart(){
+    return useContext(Context).clearCart
 }
 
 export default CartContext

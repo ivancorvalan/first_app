@@ -14,7 +14,6 @@ function Navbar(){
                 <Link to="/" className={linkStyle}>Home</Link>
                 <Link to="/category/printer" className={linkStyle}>Printers</Link>
                 <Link to="/category/mfp" className={linkStyle}>MFP</Link>
-                <Link to="/about_us" className={linkStyle}>About Us</Link>
             </div>
             <Cart />
         </nav>

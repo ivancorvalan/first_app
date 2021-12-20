@@ -9,9 +9,9 @@ import Cart from './Components/Cart/Cart'
 import Home from './Components/Screens/Home/Home';
 import {home} from './Components/Database/DataBaseHome'
 import CartContext from './Context/CartContext';
+import Login from './Components/Login/Login';
 
 function App() {
-
   return (
     <div className="App">
       <CartContext>
@@ -22,6 +22,7 @@ function App() {
             <Route path="/" element={<Home home={home}/>}/>
             <Route path="/category/:catId" element={<ItemListContainer />} />
             <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
         </BrowserRouter>

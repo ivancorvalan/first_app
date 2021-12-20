@@ -4,7 +4,7 @@ import ItemList from '../ItemList/ItemList'
 import "./itemListContainer.css"
 import {useParams} from 'react-router-dom';
 import Loading from '../Loading/Loading';
-import {getFirestore , collection  , getDocs} from 'firebase/firestore'
+import {getFirestore , collection  , getDocs } from 'firebase/firestore'
 
 function ItemListContainer(){    
     const [items , setItems] = useState([[]]);
@@ -14,7 +14,7 @@ function ItemListContainer(){
     useEffect(() => {
         setLoader(true)
         const db = getFirestore()
-        const ref = collection(db , "items")
+        const ref = collection(db , "products")
         getDocs(ref)
             .then((snapShot) => {
                 catId
