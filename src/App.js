@@ -10,6 +10,7 @@ import Home from './Components/Screens/Home/Home';
 import {home} from './Components/Database/DataBaseHome'
 import CartContext from './Context/CartContext';
 import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/item/:itemId" element={<ItemDetailContainer />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </BrowserRouter>
       </CartContext>

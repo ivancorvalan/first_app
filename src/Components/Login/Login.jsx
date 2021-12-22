@@ -1,21 +1,28 @@
 import React, { useState } from "react"
-
+import { Link } from "react-router-dom"
+import './Login.css'
 
 const Login = () => {
     const [ itsLogin , setItsLogin] = useState(true)
-    if (itsLogin === false){
+    if (itsLogin === true){
     return (
         <React.Fragment>
-            <div className="content">
-                <label>
-                    E-mail
+            <div className="login-box">
+                <h1 className="tittle-login">Login</h1>
+                <div className="content-login">
+                    <label>E-mail</label>
                     <input type="email" />
-                </label>
-                <label>
-                    Password
+                    <label>Password</label>
                     <input type="password"/>
-                </label>
-                <input type="submit" value="Login"/>
+                </div>
+                <div>
+                    <input type="submit"placeholder="login" value="Login" className="submit-button-login"/>
+                    <Link to="/register">
+                        <button className="link-button-register">
+                            <p>Register</p>
+                        </button>
+                    </Link>
+                </div>
             </div>
         </React.Fragment>
     )}
