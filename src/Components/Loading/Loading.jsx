@@ -7,7 +7,7 @@ function Loading(){
         <React.Fragment>
             <div className="load-card">
                 <img className="img-load-size" src={LoadingIcon} alt="loading.gif"></img>
-                <h1 className="text-load">Loading</h1>
+                <h1 className="text-load">Loading products</h1>
             </div>
         </React.Fragment>
             )

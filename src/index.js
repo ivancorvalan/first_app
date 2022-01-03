@@ -18,10 +18,7 @@ const firebaseConfig = {
   appId: "1:950962693632:web:eb2ed630611351395a5ae5"
 };
 
-// Initialize Firebase
 initializeApp(firebaseConfig)
-
-/*UploadProducts()*/
 
 ReactDOM.render(
   <React.StrictMode>

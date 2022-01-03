@@ -19,3 +19,9 @@
     width: 60px;
     height: 60px;
 }
+
+.barHeader{
+    width: 100%;
+    height: 10px;
+    background-color: rgb(58, 58, 58);
+}

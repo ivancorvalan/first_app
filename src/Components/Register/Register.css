@@ -1,7 +1,7 @@
 .register-box{
     background-color: white;
     width: 500px;
-    height: 400px;
+    height: fit-content;
     margin: 2% auto;
     display: flex;
     flex-direction: column;
@@ -24,20 +24,24 @@
 }
 
 .content-register{
-    margin: 2% auto;
-    width: 250px;
-    height: 450px;
     display: flex;
+    margin: auto;
     flex-direction: column;
-    justify-content: space-evenly;
-    background-color:white;
-    font-size: 14px;
-    color: rgb(48, 48, 48)
+    align-items: center;
+    height: 250px;
 }
 
 .input-button-register{
     border: solid 1px rgb(216, 216, 216);
     border-bottom: solid 2px #f9aa20;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.msg-show{
+    color: rgb(172, 0, 0);
+    font-size: 12px;
 }
 
 .submit-button-register{

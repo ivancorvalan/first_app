@@ -1,8 +1,10 @@
 .load-card{
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 5% auto;
     align-items: center;
+    width: auto;
+    height: 200px;
 }
 
 .img-load-size{

@@ -26,7 +26,6 @@
     margin-top: 2.5%;
     display: flex;
     flex-direction: column;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0 , 0.2); 
 }
 
 .content-itemList{
@@ -58,7 +57,7 @@
     margin: 10px;
 }
 
-.tittle-card{
+.tittle-card-item{
     text-align: center;
     width: 100%;
     background-color: #2098D1;
@@ -82,6 +81,7 @@
     text-align: center;
     border-radius: 5px;
 }
+
 
 .button-text{
     color: white;

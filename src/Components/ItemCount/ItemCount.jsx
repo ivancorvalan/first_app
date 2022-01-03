@@ -3,6 +3,7 @@ import './ItemCount.css'
 
 function ItemCount({stock , onAdd , initial} ) {
     const [number , setNumber] = useState(Number(initial))
+
     return (
         <React.Fragment>
             <div className="box">
@@ -16,7 +17,7 @@ function ItemCount({stock , onAdd , initial} ) {
                     
                     <button className="symbol-style" onClick={()=> {
                         if (number < stock){
-                            setNumber(number + 1)  
+                            setNumber(number + 1)
                         }
                     }}>+</button>
                 </div>

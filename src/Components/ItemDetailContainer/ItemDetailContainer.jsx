@@ -4,24 +4,20 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import Loading from "../Loading/Loading";
 /*import {products} from '../Database/DatabaseItems'*/
 import '../ItemDetail/ItemDetail.css'
-import {getFirestore , collection  , getDocs} from 'firebase/firestore'
-
+import {getFirestore , collection  , getDocs , query , where} from 'firebase/firestore'
 
 function ItemDetailContainer(){
     const [items , setItems] = useState([]);
     const [loader, setLoader] = useState(true);
-    const itemId = useParams()
+    const {itemId} = useParams()
 
     useEffect(() => {
         setLoader(true)
         const db = getFirestore()
-        const ref = collection(db , "products")
+        const ref = query(collection(db , "products"),where("id" , "==" , itemId))
         getDocs(ref)
             .then((snapShot) => {
-                itemId
-                ? setItems(snapShot.docs.filter(item => item.data().id === itemId.itemId))
-    
-                : setItems(snapShot.docs)
+                setItems(snapShot.docs)
                 }
             )
             .finally(()=>{

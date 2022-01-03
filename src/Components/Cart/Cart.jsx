@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {useDeleteItem, useItemsCart , useClearCart} from '../../Context/CartContext'
-import { addDoc, collection, getFirestore } from 'firebase/firestore';
+import { addDoc, collection, getFirestore, Timestamp } from 'firebase/firestore';
 import CartItemDetail from "../CartItemDetail/CartItemDetail";
 import './Cart.css'
 import OrderView from "../OrderView/OrderView";
+import { useFormUser, useStateLogin } from "../../Context/LoginContext";
 
 const Cart = () => {
     const [numOrder , setNumOrder] = useState()
     const deleteItem = useDeleteItem()
     const clearCart = useClearCart()
     const itemsCart = useItemsCart()
+    const stateLogin = useStateLogin()
+    const [msg , setMsg] = useState("")
+    const buyerForm = useFormUser()
 
     const deleteItemCart = (item) => {
         deleteItem(item)
@@ -37,6 +41,7 @@ const Cart = () => {
         itemsCart.map((item)=>{
             const {id , model , price , quantity } = item
             lista.push({id , model , price , quantity , "totalItem":(price * quantity)})
+            return true
         })
         return lista
     }
@@ -52,14 +57,17 @@ const Cart = () => {
             })
     }
 
-    const buyer = {
-        email : "user@gmail.com",
-        name : "user",
-        phone : "0011223344"}
+    const actual_date = () => {
+        return Timestamp.now().toDate()
+    }
 
     const Buy = () =>{
-        UploadOrder({items : getItemBuyed() , buyer:buyer , date : new Date() , total:totalPay()})
-    }
+        if (stateLogin === true){
+        setMsg("Buy successful, will be redirected to order...")
+        UploadOrder({items : getItemBuyed() , buyer : buyerForm , date : [actual_date()] , total : totalPay()})
+        }else{ 
+            setMsg("Please, login before of buy")
+        }}
 
     if (qtyItems() !== 0){
         return (
@@ -68,30 +76,29 @@ const Cart = () => {
                 <div className="tittle" >
                     <h1 className="tittle-cart">Your Cart</h1>
                 </div>
-            <div className="card-cart">
-                {itemsCart?.map((item)=>{
-                    const item_link = "/item/"+item.id
-                    return(
-                        <React.Fragment>
-                            <div className="item-style">
-                                <CartItemDetail item={item} key={item.id}/>
-                                <div className="bar-buttons">
-                                    <button className="button-text-cart" onClick={()=>{deleteItemCart(item)}} >Delete</button>
-                                    <Link to={item_link}>
-                                        <button className="button-text-cart">Come back to product</button>
-                                    </Link>
+                <div className="card-cart">
+                    {itemsCart?.map((item)=>{
+                        const item_link = "/item/"+item.id
+                        return(
+                                <div key={item.id} className="item-style">
+                                    <CartItemDetail item={item}/>
+                                    <div className="bar-buttons">
+                                        <button className="button-text-cart" onClick={()=>{deleteItemCart(item)}} >Delete</button>
+                                        <Link to={item_link}>
+                                            <button className="button-text-cart">Come back to product</button>
+                                        </Link>
+                                    </div>
                                 </div>
-                            </div>
-                        </React.Fragment>
-                            )
-                        }
-                    )
-                }
-            </div>
-            <div className="total-text">
-                <h3 className="total-pay">Total $ {totalPay()}</h3>
-            </div>
+                                )
+                            }
+                        )
+                    }
+                </div>
+                <div className="total-text">
+                    <h3 className="total-pay">Total $ {totalPay()}</h3>
+                </div>
                 <button onClick={() => {Buy()}} className="button-text-cart button-maxim">Buy Now!</button>
+                <p>{msg}</p>
             </div>
         </React.Fragment>
     )}

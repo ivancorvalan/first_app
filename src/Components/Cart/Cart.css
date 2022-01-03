@@ -11,6 +11,7 @@
     background-color: rgb(255, 255, 255);
 }
 
+
 .item-style{
     border-bottom: solid 2px rgba(39, 39, 39, 0.712);
 }
@@ -82,6 +83,15 @@
 
 .button-maxim:hover{
     transition: 0.5s;
-    transform: scale(115%);
+    transform: scale(110%);
 
+}
+
+.container-buttons-cart{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
 }
