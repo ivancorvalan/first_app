@@ -61,4 +61,6 @@
     color:rgb(49, 49, 49);
     font-size: 45px;
     text-align: center;
-    justify-content:center;}
+    justify-content:center;
+    text-shadow: 4px 4px 0px rgb(255, 255, 255);
+}
