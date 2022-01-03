@@ -1,16 +1,20 @@
-# Printers Market
+# Printers Market.
 
-Printers Market es un e-commerce de venta de impresoras y MFP multimarca.
+Printers Market es un e-commerce de venta de impresoras e impresoras multi función.
 
 Contiene:
 
-- Categorias por funcionalidad
-- Posibilidad de compra desde listado de items y desde el detalle del item
+- Categorías por funcionalidad
+- En el detalle del producto se indican especificaciones
+- Interfaz simple, amigable y predecible
+- Carrito de compras
+- Posibilidad de gestión del carrito, vuelta al item para poder incrementar la cantidad de productos, eliminación de items
 - Selección de cantidad de productos con control al stock
-- Carrito de compras (desarrollando)
 - Landing page
-- Acerca de nosotros
-- Se agregará mediante una API de Currencys la selección de la divisa a la que se quiera convertir el costo del producto
+- Registro de usuarios en DB Firebase
+- Login de usuarios
+- Entrega de número de orden de compra en la finalización de la acción
+- La base de datos de los productos se cargan mediante el componente UploadProducts donde utiliza  Databaseitems.jsx que contiene los items, en caso de que se quiera agregar un producto o modificar el stock se llama a UploadProducts que cargará en Firebase los productos.
 
 ## Instalación
 
@@ -22,7 +26,7 @@ Contiene:
    npm install
    ```
 
-    para instalar todas las dependecias del proyecto
+    para instalar todas las dependencias del proyecto
 
 3. Ejecuta en el directorio del proyecto 
 
@@ -38,15 +42,17 @@ Contiene:
 
 Uso de hover.css para formato en nav bar, ésta librería es externa - https://ianlunn.github.io/Hover/
 
-Uso de React Router Dom para la navegación
+Uso de React Router Dom 17.0.2 para la navegación
 
-Uso de React Fetch para la conexión con APIs
+Uso de React Fetch 0.0.2 para la conexión con APIs
 
-Uso de React Yarn para la ejecución del proyecto
+Uso de React Yarn 1.1.0 para la ejecución del proyecto
+
+Uso de Firebase 9.6.0 para base de datos
 
 ## Aplicación en funcionamiento
 
-![Printers Markets en funcionamiento](https://res.cloudinary.com/icorvalan/image/upload/v1637767057/gif/Printers_Market_yijiq7.gif)
+![Printers Markets en funcionamiento](https://res.cloudinary.com/icorvalan/image/upload/v1641236210/gif/Printers_Market_f8yfjk.gif)
 
 ### Autor
 

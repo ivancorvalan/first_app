@@ -4,7 +4,7 @@ const Context = React.createContext()
 
 export function CartContext ( {children}) {
     const [itemsCart , setItemsCart ] = useState([])
-    
+
     const changeQuantity = (item) => {
         const toChange = itemsCart?.filter(new_item => new_item.id===item.id)
         item.quantity = (toChange[0]?.quantity) + (item?.quantity)
@@ -38,14 +38,11 @@ export function CartContext ( {children}) {
                 itemsCart[indice] = itemChanged
                 setItemsCart(itemsCart)
             }
-            else{
-                alert("La cantidad seleccionada excede el stock")
-            }
         }
     }
 
     return (
-        <Context.Provider value={{useClearCart , clearCart , useDeleteItem , deleteItem , useItemsCart , addToCart , itemsCart , setItemsCart}}>
+        <Context.Provider value={{useClearCart , clearCart , useDeleteItem , deleteItem , useItemsCart , addToCart , itemsCart , setItemsCart }}>
             {children}
         </Context.Provider>
     )
@@ -66,6 +63,5 @@ export function useDeleteItem(){
 export function useClearCart(){
     return useContext(Context).clearCart
 }
-
 
 export default CartContext
