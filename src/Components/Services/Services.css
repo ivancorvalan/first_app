@@ -1,0 +1,44 @@
+.background-services{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    min-height: 720px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-services{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-evenly;
+}
+
+.tittle-services{
+    margin: 5% auto;
+    background-color: #2098D1;
+    padding: 2%;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    height: 10%;
+}
+
+.card-service{
+    gap: 100px;
+}
+
+.tittle-by-service{
+    color: white;
+    background-color: #1c1e1f;
+}
+
+.detail-service{
+    padding: 2% 3%;
+    height: fit-content;
+    color: #1c1e1f;
+    font-size: 1em;
+    text-align: left;
+}

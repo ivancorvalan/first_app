@@ -3,26 +3,28 @@
   src: url('Fonts/Poppins/Poppins-Light.ttf')
 }
 
-/*@font-face{
+@font-face{
   font-family: Poppins SemiBold;
-  src: url('Fonts/Poppins/Poppins-SemiBold.ttf')}*/
+  src: url('Fonts/Poppins/Poppins-SemiBold.ttf')}
 
 *{
   font-family: Poppins Light;
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
+  height: max-content;
+  /*min-height: min-content;*/
+  width: 100%;
 }
 
 .App {
-  background-image: url("https://res.cloudinary.com/icorvalan/image/upload/v1637711414/backgrounds/backgroung_image_jtdemr.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 1100px;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
+    background: #ebebeb;
+    /*background-image: url("https://res.cloudinary.com/icorvalan/image/upload/c_scale,q_100,w_1800/v1642127207/backgrounds/fondo_tq8jlq.png");
+    */width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 }
 
 .App-logo {

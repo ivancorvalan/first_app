@@ -10,12 +10,12 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB2lupxJbADORyBUooOhtERKN_mGao48as",
-  authDomain: "first-app-222b0.firebaseapp.com",
-  projectId: "first-app-222b0",
-  storageBucket: "first-app-222b0.appspot.com",
-  messagingSenderId: "950962693632",
-  appId: "1:950962693632:web:eb2ed630611351395a5ae5"
+  apiKey: "AIzaSyDqzmUYAB3M7qPgsPs8og8_u7ranYu9d8Q",
+  authDomain: "asistlegal-364a0.firebaseapp.com",
+  projectId: "asistlegal-364a0",
+  storageBucket: "asistlegal-364a0.appspot.com",
+  messagingSenderId: "640997414806",
+  appId: "1:640997414806:web:dc899e27fd0bba931b6fb7"
 };
 
 initializeApp(firebaseConfig)
@@ -24,6 +24,10 @@ initializeApp(firebaseConfig)
 
 ReactDOM.render(
   <React.StrictMode>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet" />
     <App />
   </React.StrictMode>,
   document.getElementById('root')

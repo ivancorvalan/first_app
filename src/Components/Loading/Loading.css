@@ -1,20 +1,17 @@
 .load-card{
+    width: 100%;
+    min-height: 720px;
+    height: fit-content;
     display: flex;
-    flex-direction: column;
-    margin: 5% auto;
+    margin: auto;
     align-items: center;
-    width: auto;
-    height: 200px;
-}
-
-.img-load-size{
-    margin-top: 5%;
-    width: 270px;
-    height: 180px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .text-load{
-    margin-top: -5%;
+    padding: 5% auto;
     font-size: 30px;
     color: rgb(39, 39, 39);
 }

@@ -1,66 +1,65 @@
-
-.container-home{
-    width: fit-content;
+.background-home{
+    width: 100%;
+    min-height: 550px;
     height: fit-content;
-    margin: 5% 2%;
     display: flex;
-    flex-direction:row;
-    align-content: center;
-    align-items: center;
-    justify-items:center;
-    justify-content:space-evenly;
-    backdrop-filter: blur(15px);
-    border: solid 5px white;
+    flex-direction: column;
+    margin: auto;
 }
 
-.content-img-home{
+.text-landing{
+    display: flex;
+    margin: 2% auto;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.description-home{
+    padding: 3%;
+    font-size: 1.5em;
+    color: white;
+    background-color: #2098D1;
+    width: 100%;
+    height: fit-content;
+    border: white solid 4px;
+    box-shadow: 2px 2px 5px rgb(68, 68, 68);
+}
+
+.span-description{
+    color: #1c1e1f;
+    font-weight: bolder;
+}
+
+.container-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: fit-content;
+}
+
+.buttons-home{
     display: flex;
     flex-direction: row;
     margin: auto;
     align-items: center;
     justify-content: space-evenly;
-    width: 600px;
-    height: 300px;
 }
 
-.img-format-home{
-    width: 175px;
-    height: 150px;
-}
-
-.printers-img-home{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 300px;
-    height: 300px;
-    backdrop-filter: blur(15px);
-    text-decoration: none;
-}
-.text-home{
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-}
-
-.img-format-home:hover{
-    transition: 0.75s;
-    transform: scale(115%);
-}
-
-.span-tittle{
-    color: #f9aa20;
-}
-
-.tittle-style-home{
-    width: 110%;
-    padding: 25px;
+.btn-onHome{
+    margin: 1% 0;
+    border: solid 4px #1c1e1f;
+    background-color: #ffffff;
+    color: #1c1e1f;
+    font-weight: bold;
+    font-size: 0.7em;
+    width: fit-content;
     height: fit-content;
-    color:rgb(49, 49, 49);
-    font-size: 45px;
-    text-align: center;
-    justify-content:center;
-    text-shadow: 4px 4px 0px rgb(255, 255, 255);
+    padding: 2.5%;
+}
+
+.btn-onHome:hover{
+    color: #1c1e1f;
+    border: solid 4px white;
+    transition: 0.5s;
 }

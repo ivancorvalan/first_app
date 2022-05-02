@@ -28,6 +28,7 @@ const Login = () => {
             .then((user) => {setMsg("Login successful")
                             changeStatusLogin(true)
                             sendFormContext(user.user.providerData)
+                            console.log(user)
             })
             .catch(() => {setMsg("Invalid credentials")})
         }
@@ -38,26 +39,28 @@ const Login = () => {
 
     return (
         <React.Fragment>
-            <div className="login-box">
-                <h1 className="tittle-login">Login</h1>
-                <div className="content-login">
-                    <div className="icon-input">
-                        <img className="img-icon-style" alt="user" src="https://res.cloudinary.com/icorvalan/image/upload/v1640887000/icon/login-form_rwoisf.png"></img>
-                        <input type="email" name="email" placeholder="e-mail" onChange={onChange}required/>
+            <div className="container background-login">
+                <div className="login-box">
+                    <h1 className="tittle-login">Iniciar sesión</h1>
+                    <div className="content-login">
+                        <div className="icon-input">
+                            <img className="img-icon-style" alt="user" src="https://res.cloudinary.com/icorvalan/image/upload/v1640887000/icon/login-form_rwoisf.png"></img>
+                            <input type="email" name="email" placeholder="e-mail" onChange={onChange}required/>
+                        </div>
+                        <div className="icon-input">
+                            <img className="img-icon-style" alt="password" src="https://res.cloudinary.com/icorvalan/image/upload/v1640887000/icon/pass_form_a3j1rk.png"></img>
+                            <input type="password" placeholder="password" name="password" onChange={onChange} required/>
+                        </div>
+                        <div className="icon-input">
+                            <p>{msg}</p>
+                        </div>
                     </div>
-                    <div className="icon-input">
-                        <img className="img-icon-style" alt="password" src="https://res.cloudinary.com/icorvalan/image/upload/v1640887000/icon/pass_form_a3j1rk.png"></img>
-                        <input type="password" placeholder="password" name="password" onChange={onChange} required/>
+                    <div className=".container-buttons">
+                        <button id="login" type="submit" onClick={signUpUser} className="submit-button-login">Iniciar</button>
+                        <Link to="/register">
+                            <button className="submit-button-login">Registrase</button>
+                        </Link>
                     </div>
-                    <div className="icon-input">
-                        <p>{msg}</p>
-                    </div>
-                </div>
-                <div className="container-buttons-login">
-                    <button id="login" type="submit" onClick={signUpUser} className="submit-button-login">Login</button>
-                    <Link to="/register">
-                        <button className="link-button-register">Register</button>
-                    </Link>
                 </div>
             </div>
     </React.Fragment>)}

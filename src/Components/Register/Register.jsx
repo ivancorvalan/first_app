@@ -31,6 +31,7 @@ const Register = () => {
                                                 )
                 .then(()=>{setMsg("Registered")
                             updateProfile(auth.currentUser , {displayName : createUser?.name})
+                            console.log(createUser)
                             sendFormContext(createUser)
                             setFlagRegister(true)
                             })

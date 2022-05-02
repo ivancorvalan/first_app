@@ -1,20 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import ButtonLink from "../../Button/Button";
 import './Home.css'
-
 
 function Home(){
     return(
         <React.Fragment>
-            <div className="container-home">
-                <h1 className="tittle-style-home">They are not just <span className="span-tittle">printers</span>,<br /> they are solutions</h1>
-                <div className="content-img-home">
-                    <Link to='/category/printer' className="printers-img-home">
-                        <img className='img-format-home' src='https://res.cloudinary.com/icorvalan/image/upload/c_scale,h_450,q_100,w_512/v1640226284/home_png/favpng_printer_emqnf3.png' alt='printer'/>
-                    </Link>
-                    <Link to='/category/mfp' className="printers-img-home">
-                        <img className='img-format-home' src='https://res.cloudinary.com/icorvalan/image/upload/v1640226269/home_png/multifunction-printer_oduljv.png' alt='mfp' />
-                    </Link>
+            <div className="container background-home">
+                <div className="container text-landing">
+                    <div className="description-home">
+                        <p className="container">Hola, soy <span className="span-description">Carolina Corvalán</span>, Abogada Laboralista recibida en la Universidad de Buenos Aires.<br></br>En <span className="span-description">AsistLegal</span> te brindamos asesoramiento completamente online!!!</p>
+                        <div className="grid container-buttons">
+                            <ButtonLink link={"/contact"} text_button={"Asesorate!"}/>
+                            <ButtonLink link={"/service"} text_button={"Nuestros servicios"}/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </React.Fragment>

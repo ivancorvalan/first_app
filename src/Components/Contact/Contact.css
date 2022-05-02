@@ -1,0 +1,141 @@
+@media only screen and (max-width: 500px) {
+    .form-container{
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .form-container-input{
+        display: flex;
+        margin: 1% 0;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+@media only screen and (min-width: 501px) {
+    .form-container{
+        display: flex;
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .form-container-input{
+        display: flex;
+        margin: 1% 0;
+        flex-direction: column;
+        align-items: center;
+        width: 48%;
+        height: fit-content;
+    }
+}
+
+.contact-background{
+    display: flex;
+    margin: auto;
+    width: 95%;
+    min-height: 720px;
+    height: fit-content;
+}
+
+.contact-container{
+    margin: 3%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background-color: #ffffff;
+    color: #1c1e1f;
+    border:solid white 5px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0 , 0.5);
+}
+
+.contact-header{
+    display: flex;
+    margin: 2%;
+    color: #1c1e1f;
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+}
+
+.form{
+    display: flex;
+    margin: auto;
+    width: 95%;
+    flex-direction: column;
+}
+
+.form-container-input-data{
+    display: flex;
+    margin: 1% 0;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.form-label{
+    display: flex;
+    margin: auto;
+    padding: 1%;
+    width: 100%;
+    font-size: 1em;
+    font-weight: bold;
+    justify-items: center;
+    color: #ffffff;
+    background-color: #2098D1;
+}
+
+.form-label-data{
+    display: flex;
+    margin: auto;
+    padding: 1%;
+    width: 100%;
+    height: fit-content;
+    font-size: 1em;
+    font-weight: bold;
+    justify-items: center;
+    color: #ffffff;
+    background-color: #2098D1;
+}
+
+.form-input{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    border: none;
+    border-bottom: solid #747474 1px;
+    border-radius: 0;
+}
+
+.button-send-contact{
+    display: flex;
+    margin: 2.5% 0;
+    padding: 1% 5%;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+    border: white solid 2px;
+    background-color: #2098D1;
+}
+
+.button-send-contact:hover{
+    transition: 0.5s;
+    color: #2098D1;
+    background-color: #ffffff;
+}
